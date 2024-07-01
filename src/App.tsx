@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Slideshow from './Embedded-Slideshow';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const slides = [
+    {
+      image: 'images/all .png',
+      text: 'All Options',
+    },
+    {
+      image: 'images/ice cream option.png',
+      text: 'Ice Cream Options',
+    },
+    {
+      image: 'images/popsicle.png',
+      text: 'Popsicle Options',
+    },
+    {
+      image: 'images/ice cream sandwich.png',
+      text: 'Ice Cream Sandwich Options',
+    },
+  ];
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <div style={{textAlign: 'center'}}>
+        <h1>Explore our Range</h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <Slideshow slides ={slides} />
+    </div>
+  );
+};
 
-export default App
+export default App;
