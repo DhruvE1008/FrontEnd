@@ -5,6 +5,7 @@ import AboutMePage from '../public/pages/AboutMePage';
 import IceCreamPage from '../public/pages/IceCreamPage';
 import PopsiclePage from '../public/pages/PopsiclePage';
 import IceCreamSandwichPage from '../public/pages/IceCreamSandwichPage';
+import AllOptionsPage from '../public/pages/AllOptionsPage';
 
 const PageRouter: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const PageRouter: React.FC = () => {
         <Route path="/iceCream" element={<IceCreamPage/>} />
         <Route path="/popsicle" element={<PopsiclePage/>} />
         <Route path="/sandwich" element={<IceCreamSandwichPage/>} />
+        <Route path="/all" element={<AllOptionsPage/>} />
       </Routes>
   );
 };

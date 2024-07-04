@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const SlideshowContainer = styled(Box)({
     margin: 'auto',
@@ -77,7 +78,7 @@ const Dot = styled('span')<{ active: boolean }>(({ active }) => ({
   });
   
 interface SlideshowProps {
-    slides: { image: string; text: string }[];
+    slides: { image: string; text: string; link: string }[];
 }
   
 const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
@@ -100,7 +101,9 @@ const Slideshow: React.FC<SlideshowProps> = ({ slides }) => {
         <Slides current={current}>
           {slides.map((slide, index) => (
             <Slide key={index}>
+              <Link to = {slide.link}>
                 <Image src={slide.image} alt={`Slide ${index}`} />
+              </Link>
                 <Text>{slide.text}</Text>
             </Slide>
           ))}

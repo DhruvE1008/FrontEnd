@@ -6,18 +6,22 @@ const HomePage: React.FC = () => {
         {
           image: 'images/all .png',
           text: 'All Options',
+          link: '/all',
         },
         {
           image: 'images/ice cream option.png',
           text: 'Ice Cream Options',
+          link: '/iceCream',
         },
         {
           image: 'images/popsicle.png',
           text: 'Popsicle Options',
+          link: '/popsicle',
         },
         {
           image: 'images/ice cream sandwich.png',
           text: 'Ice Cream Sandwich Options',
+          link: '/sandwich',
         },
       ];
     return (
